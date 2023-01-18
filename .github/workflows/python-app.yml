@@ -26,7 +26,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install flake8 pytest
+        pip install flake8 pytest codecov
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: pytest
       run: |
@@ -34,3 +34,8 @@ jobs:
     - name: flake8
       run: |
         flake8
+    - name: Relatorio Coverage
+      env:
+        CODECOV_TOKEN: 'f66f4b91-6746-4275-bf5f-2efba479abee'
+      run: |
+          codecov
