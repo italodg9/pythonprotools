@@ -28,7 +28,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install flake8 pytest codecov
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - name: pytest
+    - name: Pytest
       run: |
         pytest
     - name: flake8
