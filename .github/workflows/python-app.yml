@@ -38,4 +38,4 @@ jobs:
       env:
         CODECOV_TOKEN: 'f66f4b91-6746-4275-bf5f-2efba479abee'
       run: |
-          pytest codecov
+          pytest --cov=libprotools
