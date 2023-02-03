@@ -4,7 +4,6 @@ import pytest
 
 from libprotools.spam.main import EnviadordeSpam
 from libprotools.spam.modelos import Usuario
-from libprotools.spam.enviador_de_email import Enviador
 
 
 @pytest.mark.parametrize(
