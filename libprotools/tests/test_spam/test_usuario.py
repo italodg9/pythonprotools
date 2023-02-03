@@ -2,7 +2,7 @@ from libprotools.spam.modelos import Usuario
 
 
 def test_salvar_usuario(sessao):
-    usuario = Usuario(nome="Italo", email= 'italodg9@outlook.com')
+    usuario = Usuario(nome="Italo", email='italodg9@outlook.com')
     sessao.salvar(usuario)
     assert isinstance(usuario.id, int)
 
