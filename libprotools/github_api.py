@@ -9,9 +9,4 @@ def buscar_avatar(usuario):
 
     url = f'https://api.github.com/users/{usuario}'
     busca = requests.get(url)
-    return f"O id do usuario é: {busca.json()['id']}\n" \
-           f"E o seu avatar é {busca.json()['avatar_url']} "
-
-
-if __name__ == '__main__':
-    print(buscar_avatar(input('Qual o usuário:')))
+    return busca.json()['avatar_url']
